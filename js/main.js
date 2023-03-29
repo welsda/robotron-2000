@@ -1,3 +1,4 @@
+const corDoRobo = document.querySelectorAll(".alterar");
 const controle = document.querySelectorAll("[data-controle]"); //procura elementos com essa propriedade
 const estatisticas = document.querySelectorAll("[data-estatistica]");
 const pecas = {
@@ -32,6 +33,13 @@ const pecas = {
         "velocidade": -2
     }
 }
+const robo = document.querySelector(".robo");
+
+corDoRobo.forEach((elemento) => {
+    elemento.addEventListener("click", (evento) => {
+        mudaCor(evento.target.dataset.cor);
+    })
+})
 
 controle.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => { //sempre há um evento no click
@@ -58,4 +66,8 @@ function atualizaEstatisticas(peca, operacao) {
             elemento.textContent = String(parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatistica]).padStart(2, "0");
         }
     })
+}
+
+function mudaCor(cor) {
+   robo.src="img/Robotron 2000 - " + cor + "/robotron.png";
 }

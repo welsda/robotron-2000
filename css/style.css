@@ -41,7 +41,7 @@ main {
     height: 110%;
     z-index: 1;
     position: absolute;
-    left: -20%;
+    left: -12%;
     top: -5%;
 }
 
@@ -218,6 +218,31 @@ main {
         height: 80vh;
         margin: 5vh auto;
     }
+}
+
+.alterar {
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 2px;
+    width: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.alterar:hover {
+    background: var(--main-preto);
+    color: var(--main-branco)
+}
+
+.botoes {
+   position: absolute;
+   left: 200px;
+   top: 640px;
+   display: flex;
+   flex-wrap: wrap;
+   width: 320px;
+   z-index: 1;
 }
 
 @media screen and (max-width: 1200px) {
